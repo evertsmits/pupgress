@@ -26,6 +26,7 @@ Below you'll find information about performing common tasks. The most recent ver
   * [Networking](#networking)
   * [iOS Simulator won't open](#ios-simulator-wont-open)
   * [QR Code does not scan](#qr-code-does-not-scan)
+  * pupgress
 
 ## Updating to New Releases
 
@@ -221,3 +222,6 @@ If this causes problems for you, you may want to try changing your terminal's co
 =======
 # pupgress
 React native application for training your pup
+
+# changes
+version 0.01    added empty react native project
