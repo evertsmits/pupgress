@@ -1,23 +1,36 @@
 import React from 'react';
+import { Font, Expo } from 'expo';
 import { StyleSheet, Text, View } from 'react-native';
+import { TabNavigator } from 'react-navigation';
+import Title from './Components/Textcomponents/Title';
+import Header from './Components/Header/Header';
+import Today from './Components/TodayScreen/Today';
+import Graphs from './Components/GraphsScreen/Graphs';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
-  }
+export default TabNavigator(
+
+{
+  TODAY :{ screen: Today },
+  GRAPHS: { screen: Graphs}
+},
+{
+ tabBarOptions: {
+   activeTintColor: '#FFF',
+   inactiveBackgroundColor: "#0097A7",
+   activeBackgroundColor: "#FFC107",
+   inactiveTintColor: '#FFF',
+   scrollEnabled: true,
+   labelStyle: {
+     marginBottom: 10,
+     fontSize: 20,
+     fontFamily: 'Verdana',
+   }
+ },
+ tabBarPosition: 'bottom',
+ swipeEnabled: true,
+ lazy: false,
+ animationEnabled: true,
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+);
